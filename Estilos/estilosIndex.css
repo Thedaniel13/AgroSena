@@ -1,0 +1,454 @@
+/* ESTILOS GENERALES */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #a1dd70!important; 
+    background-repeat:no-repeat ;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    min-width: 400px;
+}
+
+h2{
+    text-align: center;
+    
+}
+
+h2 a{
+    text-decoration: none;
+    color: gray;
+    font-size: 90px;
+}
+
+#particles-js {
+	height: 100vh; 
+	width: 100%;
+    position: fixed;
+    z-index: -1;
+    background-image: url('../Imagenes/Logo.svg');
+    background-color: rgba(76, 228, 159, 0.979);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+/*Icono carro de compras*/
+.shopping-cart-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff; /* Cambia el color de fondo según tus necesidades */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 1000; /* Asegura que el icono esté por encima de otros elementos */
+    transition: transform 0.3s;
+}
+
+.shopping-cart-icon a {
+    color: #000; /* Cambia el color del icono según tus necesidades */
+    text-decoration: none;
+    font-size: 24px; /* Tamaño del icono */
+}
+
+.shopping-cart-icon a i{
+    color: #000;
+    align-items: center;
+}
+
+.shopping-cart-icon:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+
+/*Barra de navegacion*/
+header .navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 85px;
+    background-color: #41b06e;
+    padding: 5px 10%;
+}
+
+header .logo img{
+    height: 50px;
+    border-radius: 20%;
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover{
+    transform: scale(1.25);
+}
+
+/* header .nav-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+} */
+
+header .nav-links li{
+    margin: 0 15px;
+    display: inline-block;
+}
+
+header .nav-links a {
+    color: white;
+    padding: 8px 16px;
+} 
+
+header .nav-links li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.profile i {
+    height: 100%;
+    width: auto;
+    color: #000000;
+}
+
+.menu{
+    display: none;
+}
+
+header .btn i,
+header .menu i{
+    margin-left: 20px;
+    color: black;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+header .btn i:hover,
+header .menu i:hover{
+    background-color: #e2f1f8;
+    color: #ffbc0e;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 800px){
+    .nav-links,
+    .btn,
+    .profile {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu {
+        display: block;
+        background: none; 
+        padding: 10px; 
+        font-size: 18px; 
+        cursor: pointer; 
+        transition: all 0.3s ease; 
+    }
+
+    .menu button {
+        background-color: #41b06e; /* Para mantener el color de fondo */
+        border: none; /* Quitar borde */
+        color: white; /* Color del texto */
+        font-size: 16px; /* Tamaño del texto */
+    }
+
+    .menu button:hover {
+        background-color: #ddd;
+        color: black;
+    }
+}
+
+/*navMobile*/
+
+header a{
+    text-decoration: none;
+}
+
+header .overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(33, 49, 63, .95);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+header .overlay .overlay-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: #eceff1;
+}
+
+header .overlay a:hover,
+header .overlay a:focus{
+    color: #ffbc0e;
+}
+
+header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+    
+@media screen and (max-height: 450px) {
+    header .overlay a{
+        font-size: 20px;
+    }
+
+    header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/*Carrusel*/
+.slider-frame{
+    width: 100%;
+    height: auto;
+    margin: 10px auto 0;
+    overflow: hidden;
+
+   
+}
+
+.slider-frame ul{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 400%;
+    animation: slide 16s infinite alternate ease-in-out;
+}
+
+.slider-frame li{
+    list-style: none;
+    width: 100%;
+  
+}
+
+.slider-frame img{
+    width: 100%;
+    height: 70%;
+    display: block;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    95% {margin-left: -300%;}
+}
+
+
+
+/*Productos*/
+.product-card {
+    background: rgba(65, 176, 110, 0.900);
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    object-fit: scale-down;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-info h2 {
+    font-size: 24px;
+    color: #000000; /* Green color */
+}
+
+.product-info p {
+    color: #000000;
+    font-size: 16px;
+}
+
+/* Estilos para el botón "Agregar al carrito" */
+.btn-add-to-cart {
+    background-color: #32ac3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #357e4e;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-info h2,
+.modal-info p {
+    margin: 10px 0;
+}
+
+
+
+/*Footer*/
+footer {
+    background-color: #228B22; /* Color verde */
+    color: white;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+    text-align: center;
+}
+
+.footer-section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.payment-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.payment-icons a:hover {
+    color: #ffdd57; /* Color amarillo */
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ffffff33; /* Blanco suave para un borde sutil */
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}

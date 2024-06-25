@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hortalizas</title>
+    <!--FavIcon-->
+    <link rel="shortcut icon" href="Imagenes/FavIcon/Logo.ico" type="image/x-icon">
+    <!--Estilos propios-->
+    <link rel="stylesheet" href="Estilos/estilosHortalizas.css">
+    <!--Estilos boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Freeman&family=Jacquard+12&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!--Estilos fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <!-- ID Particles.js -->
+  <div id="particles-js"></div>
+
+  <!--Carrito-->
+  <div class="shopping-cart-icon">
+    <a href="Carrito.html">
+    <i class="fas fa-shopping-cart"></i>
+        </a>
+  </div>
+   <!--Nav-->
+   <header>
+    <nav class="navBar">
+        <div class="logo">
+            <a href="#"><img src="Imagenes/Logo.png" alt="AGROSENA"></a>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="Index.html">Agrosena</a></li>
+            <li><a href="productosHortalizas.html">Hortalizas</a></li>
+            <li><a href="productosCarnicos.html">Carnicos</a></li>
+            <li><a href="productosLacteos.html">Lacteos</a></li>
+        </ul>
+        <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+        <div class="profile">
+            <a href="registroUsuarios.html" target="blank"><i class="fa-solid fa-user"></i></a>
+        </div>
+        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+    </nav>
+    
+    <!--NavBar Responsive-->
+    <div id="mobile-menu" class="overlay">
+        <a onclick="closeNav()" href="" class="close">&times;</a>
+        <div class="overlay-content">
+            <a href="#">Agrosena</a>
+            <a href="#">Hotalizas</a>
+            <a href="#">Carnicos</a>
+            <a href="#">Lacteos</a>
+        </div>
+    </div>
+</header>
+
+  <!--Carrusel-->
+  <div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10">
+        <img src="Imagenes/imagenes/7.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Berenjenas</h5>
+          <p>"¡Descubre el sabor y la versatilidad de nuestras berenjenas frescas! Perfectas para asar, hornear o añadir a tus platos favoritos. Compra hoy y lleva a tu cocina un ingrediente saludable y delicioso. ¡No te lo pierdas!"
+
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="10">
+        <img src="Imagenes/imagenes/9.png  " class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>¡Esparragos!</h5>
+          <p>"¡Añade un toque de elegancia y nutrición a tus comidas con nuestros espárragos frescos! Ideales para asar, saltear o disfrutar en ensaladas. Compra hoy y descubre la diferencia en sabor y calidad. ¡No te lo pierdas!"</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="10">
+        <img src="Imagenes/imagenes/8.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>¡Coliflor!</h5>
+          <p>"¡Descubre la versatilidad y el sabor de nuestra coliflor fresca! Perfecta para asar, gratinar o convertirla en deliciosas guarniciones. Compra hoy y eleva tus platos a otro nivel con la frescura y calidad de nuestros productos. ¡No te lo pierdas!"</p>
+        </div>
+      </div>
+    </div> 
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <h2>Productos mas Vendidos<br></h2>
+  <!--productos mas vendidos-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-12 col-lg-3 pt-3 ">
+        <div class="card-kij bg-white p-4" style="width: 15rem;">
+          <img src="Imagenes/imagenes/pepino.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-black">pepino 1 und</h5>
+            <p class="card-text text-black"> und $1.500 COP
+            </p>
+            <p class="card-textt text-black">$1.500</p>
+            <a href="#" class="btn btn-primary mx">Agregar al carrito <button class="btn cart-btn">.</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 col-lg-3 pt-3">
+        <div class="card-kij bg-white p-4" style="width: 15rem;">
+          <img src="Imagenes/imagenes/pepini rojo.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-black">pepino rojo 1und</h5>
+            <p class="card-text text-black"> und $1.000 COP</p>
+            <p class="card-textt text-black">$1.000</p>
+            <a href="#" class="btn btn-primary mx">Agregar al carrito <button class="btn cart-btn">.</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 col-lg-3 pt-3">
+        <div class="card-kij bg-white p-4" style="width: 15rem;">
+          <img src="Imagenes/imagenes/brocoly.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-black">brocoli 1und</h5>
+            <p class="card-text text-black">un $2.500 COP</P>
+            <p class="card-textt text-black">$2.500</p> 
+                <a href="#" class="btn btn-primary mx">Agregar al carrito <button class="btn cart-btn">.</button></a>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 col-lg-3 pt-3">
+        <div class="card-kij bg-white p-4" style="width: 15rem;">
+          <img src="Imagenes/imagenes/calabasin.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-black">calabasin 1 und</h5>
+            <p class="card-text text-black"> und $1.700 COP
+            </p>
+            <p class="card-textt text-black">$1.700</p>
+            <a href="#" class="btn btn-primary mx">Agregar al carrito <button class="btn cart-btn">.</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 col-lg-3 pt-3">
+        <div class="card-kij bg-white p-4" style="width: 15rem;">
+          <img src="Imagenes/imagenes/berenjena.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-black">berenjena 1und</h5>
+            <p class="card-text text-black"> und $3.000 COP
+            </p>
+            <p class="card-textt text-black">$3.000</p>
+            <a href="#" class="btn btn-primary mx">Agregar al carrito <button class="btn cart-btn">.</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 col-lg-3 pt-3">
+        <div class="card-kij bg-white p-4" style="width: 15rem;">
+          <img src="Imagenes/imagenes/lechugas.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-black">Col Rizada 1und</h5>
+            <p class="card-text text-black"> und $2.000 COP
+            </p>
+            <p class="card-textt text-black">$2.000</p>
+            <a href="#" class="btn btn-primary mx">Agregar al carrito <button class="btn cart-btn">.</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 col-lg-3 pt-3">
+        <div class="card-kij bg-white p-4" style="width: 15rem;">
+          <img src="Imagenes/imagenes/remolacha.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-black">Remolacha 1 und</h5>
+            <p class="card-text text-black"> und $1.700 COP
+            </p>
+            <p class="card-textt text-black">$1.700</p>
+            <a href="#" class="btn btn-primary mx">Agregar al carrito <button class="btn cart-btn">.</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 col-lg-3 pt-3">
+        <div class="card-kij bg-white p-4" style="width: 15rem;">
+          <img src="Imagenes/imagenes/coliflor.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-black">Coliflor 1 und</h5>
+            <p class="card-text text-black"> und $1.400 COP
+            </p>
+            <p class="card-textt text-black">$1.400</p>
+            <a href="#" class="btn btn-primary mx">Agregar al carrito <button class="btn cart-btn">.</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 col-lg-3 pt-3">
+        <div class="card-kij bg-white p-4" style="width: 15rem;">
+          <img src="Imagenes/imagenes/sparrago.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-black">Esparragos 1 und</h5>
+            <p class="card-text text-black"> und 1.700 COP
+            </p>
+            <p class="card-textt text-black">$1.700</p>
+            <a href="#" class="btn btn-primary mx">Agregar al carrito <button class="btn cart-btn">.</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 col-lg-3 pt-3">
+        <div class="card-kij bg-white p-4" style="width: 15rem;">
+          <img src="Imagenes/imagenes/cebolla roja.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-black">cebolla roja 1und</h5>
+            <p class="card-text text-black"> und $2.400 COP
+            <p class="card-textt text-black">$2.400</p>
+            <a href="#" class="btn btn-primary mx">Agregar al carrito <button class="btn cart-btn">.</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 col-lg-3 pt-3">
+        <div class="card-kij bg-white p-4" style="width: 15rem;">
+          <img src="Imagenes/imagenes/hacelga.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-black">Hacelga 1und</h5>
+            <p class="card-text text-black"> und $1.500 COP
+            </p>
+            <p class="card-textt text-black">$1.500.</p>
+            <a href="#" class="btn btn-primary mx">Agregar al carrito <button class="btn cart-btn">.</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 col-lg-3 pt-3">
+        <div class="card-kij bg-white p-4" style="width: 15rem;">
+          <img src="Imagenes/imagenes/rabano.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-black">Rabano 1und</h5>
+            <p class="card-text text-black"> und $ 1.700 COP
+            </p>
+            <p class="card-textt text-black">$1.700</p>
+            <a href="#" class="btn btn-primary mx">Agregar al carrito <button class="btn cart-btn">.</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Contenido de la página -->
+<br>
+<div class="container-fluid">
+  <footer>
+      <div class="footer-container">
+          <div class="footer-section about">
+              <h2>AgroSena</h2>
+              <div class="payment-icons">
+                  <a href="#"><i class="fa-solid fa-credit-card"></i></a>
+                  <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
+                  <a href="#"><i class="fa-solid fa-money-bill"></i></a>
+              </div>
+          </div>
+          <div class="footer-section contact">
+              <h2>Contáctanos</h2>
+              <div class="contact-info">
+                  <p><i class="fas fa-map-marker-alt"></i> Dirección, Ciudad, País</p>
+                  <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                  <p><i class="fas fa-envelope"></i> info@agrosena.com</p>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2024 AgroSena. Todos los derechos reservados.</p>
+      </div>
+  </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!--Script Propios-->
+<script src="Scripts/Index.js"></script>
+</body>

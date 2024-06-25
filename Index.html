@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AgroSena</title>
+    <!--FavIcon-->
+    <link rel="shortcut icon" href="Imagenes/FavIcon/Logo.ico" type="image/x-icon">
+    <!-- Estilos CSS propios -->
+    <link rel="stylesheet" href="Estilos/estilosIndex.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  
+    
+    
+</head>
+<body>
+    <!-- ID Particles.js -->
+    <div id="particles-js"></div>
+     <!--Carrito-->
+    <div class="shopping-cart-icon">
+        <a href="Carrito.html">
+        <i class="fas fa-shopping-cart"></i>
+        </a>
+    </div>
+   <!--Nav-->
+    <header>
+        <nav class="navBar">
+            <div class="logo">
+                <a href="#"><img src="Imagenes/Logo.png" alt="AGROSENA"></a>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="Index.html">Agrosena</a></li>
+                <li><a href="productosHortalizas.html">Hortalizas</a></li>
+                <li><a href="productosCarnicos.html">Carnicos</a></li>
+                <li><a href="productosLacteos.html">Lacteos</a></li>
+            </ul>
+            <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+            <div class="profile">
+                <a href="registroUsuarios.html" target="blank"><i class="fa-solid fa-user"></i></a>
+            </div>
+            <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+        </nav>
+        
+        <!--NavBar Responsive-->
+        <div id="mobile-menu" class="overlay">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="#">Agrosena</a>
+                <a href="#">Hotalizas</a>
+                <a href="#">Carnicos</a>
+                <a href="#">Lacteos</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Carrusel -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="offset-lg-1 col-lg-10 col-md-12 col-sm-12 me-5 p-5">
+                <div class="slider-frame">
+                    <ul>
+                        <li><img src="Imagenes/Slider/Beff.jpg" alt=""></li>
+                        <li><img src="Imagenes/Slider/Eggs.jpg" alt=""></li>
+                        <li><img src="Imagenes/Slider/Manzanas.jpg" alt=""></li>
+                        <li><img src="Imagenes/Slider/Onions.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img src="Imagenes/imagenes/tomate.png" alt="Product Image" id="modalImage">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <p id="modalPrice"></p>
+                    <button class="btn-add-to-cart">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Mas vendidos -->
+    <h2><a href="productosMasVendidos.html">Mas Vendidos</a></h2>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="Imagenes/Products/tomate.png" alt="Tomates">
+                        </div>
+                        <div class="product-info">
+                            <h2>Tomates</h2>
+                            <p>Frescos rojos y redonditos los mejores tomates de la zona.</p>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="Imagenes/Products/carneDeRes.png" alt="Tomates">
+                        </div>
+                        <div class="product-info">
+                            <h2>Carne de res</h2>
+                            <p>Carne fresca, bien almacenada y de los mejores animales.</p>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="Imagenes/Products/lecheEntera.png" alt="Tomates">
+                        </div>
+                        <div class="product-info">
+                            <h2>Leche Entera</h2>
+                            <p>La mejor Leche de nuestros mejores animales y bien fresca</p>
+                            <button class="btn-add-to-cart">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!--Footer-->
+    <div class="container-fluid">
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section about">
+                    <h2>AgroSena</h2>
+                    <div class="payment-icons">
+                        <a href="#"><i class="fa-solid fa-credit-card"></i></a>
+                        <a href="#"><i class="fa-brands fa-cc-visa"></i></a>
+                        <a href="#"><i class="fa-solid fa-money-bill"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section contact">
+                    <h2>Contáctanos</h2>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Dirección, Ciudad, País</p>
+                        <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                        <p><i class="fas fa-envelope"></i> info@agrosena.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroSena. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="Scripts/Index.js"></script>
+</body>
+</html>

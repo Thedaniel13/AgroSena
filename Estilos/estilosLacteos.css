@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    text-align: center;
+}
+
+/*Carrito*/
+.shopping-cart-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff; /* Cambia el color de fondo según tus necesidades */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    z-index: 1000; /* Asegura que el icono esté por encima de otros elementos */
+    transition: transform 0.3s;
+}
+
+.shopping-cart-icon a {
+    color: #000; /* Cambia el color del icono según tus necesidades */
+    text-decoration: none;
+    font-size: 24px; /* Tamaño del icono */
+}
+
+.shopping-cart-icon a i{
+    color: #000;
+    align-items: center;
+}
+
+.shopping-cart-icon:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+/*Fondo de la pagina*/
+#particles-js {
+	height: 100vh; 
+	width: 100%;
+    position: fixed;
+    z-index: -1;
+    background-image: url('../Imagenes/Logo.svg');
+    background-color: rgba(76, 228, 159, 0.979);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+/*Card*/
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    width: auto;
+    height: 500px;
+}
+  
+.list-group-item {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+}
+
+
+
+/*NavBar*/
+header .navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 85px;
+    background-color: #41b06e;
+    padding: 5px 10%;
+}
+
+header .logo img{
+    height: 50px;
+    border-radius: 20%;
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover{
+    transform: scale(1.25);
+}
+
+/* header .nav-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+} */
+
+header .nav-links li{
+    margin: 0 15px;
+    display: inline-block;
+}
+
+header .nav-links a {
+    color: white;
+    padding: 8px 16px;
+} 
+
+header .nav-links li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.profile i {
+    height: 100%;
+    width: auto;
+    color: #000000;
+}
+
+.menu{
+    display: none;
+}
+
+header .btn i,
+header .menu i{
+    margin-left: 20px;
+    color: black;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+header .btn i:hover,
+header .menu i:hover{
+    background-color: #e2f1f8;
+    color: #ffbc0e;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 800px){
+    .nav-links,
+    .btn,
+    .profile {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu {
+        display: block;
+        background: none; 
+        padding: 10px; 
+        font-size: 18px; 
+        cursor: pointer; 
+        transition: all 0.3s ease; 
+    }
+
+    .menu button {
+        background-color: #41b06e; /* Para mantener el color de fondo */
+        border: none; /* Quitar borde */
+        color: white; /* Color del texto */
+        font-size: 16px; /* Tamaño del texto */
+    }
+
+    .menu button:hover {
+        background-color: #ddd;
+        color: black;
+    }
+}
+
+/*navMobile*/
+
+header a{
+    text-decoration: none;
+}
+
+header .overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(33, 49, 63, .95);
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+header .overlay .overlay-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: #eceff1;
+}
+
+header .overlay a:hover,
+header .overlay a:focus{
+    color: #ffbc0e;
+}
+
+header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+}
+    
+@media screen and (max-height: 450px) {
+    header .overlay a{
+        font-size: 20px;
+    }
+
+    header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+/*Carrusel*/
+.carouselExampleDark img{
+    max-height: 30rem;
+    object-fit: cover;
+    min-height: 30rem;
+}
+
+
+
+.card-img-top{
+    background-color: rgb(255, 255, 255);
+    border-style: none;
+    border-color: rgb(255, 255, 255);
+}
+
+.card-textt{
+    font-weight: bold;
+}
+
+.cart-btn {
+    background-image: url('./imagenes pajina/carrito\ compras.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 40%; /* Ajusta el espaciado a tu gusto */
+  }
+  
+  .card-img-top{
+    width: 200px; /* Ancho de la imagen */
+    height: 150px; /* Alto de la imagen */
+  }
+
+
+  .card-kij{
+    background-color: rgb(255, 255, 255);
+   border: none;
+   width: auto;
+   height: auto;
+  }
+
+  .carousel-item img {
+    width: 50%;
+    height: 500px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+}
+
+.carouselExampleSlidesOnly img{
+    max-height: 10rem;
+    object-fit: cover;
+    min-height: 10rem;
+}
+.carouselExampleSlidesOnly-conteiner {
+    position: relative;
+}
+.carouselExampleSlidesOnly-overlay{
+    position:absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0, 0.8);
+    font-family: "Freeman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+/*Footer*/
+footer {
+    background-color: #228B22; /* Color verde */
+    color: white;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+    text-align: center;
+}
+
+.footer-section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.payment-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.payment-icons a:hover {
+    color: #ffdd57; /* Color amarillo */
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #ffffff33; /* Blanco suave para un borde sutil */
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+ 
+  
